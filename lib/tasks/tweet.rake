@@ -6,7 +6,7 @@ task :tweet => :environment do
     bat_mitz_tweet = $client.search("'my bat mitzvah'", result_type: "recent").take(5).detect { |tw| tw.retweeted_status.nil? }
     # Do the thing
     if bat_mitz_tweet
-      puts "Tweeting to the Bat Mitzvah girl..."
+      puts "Tweeting to @#{bat_mitz_tweet.user.screen_name} in reply to #{bat_mitz_tweet.id}..."
       $client.update("@#{bat_mitz_tweet.user.screen_name} Mazel tov!", {in_reply_to_status_id: bat_mitz_tweet.id})
     else
       puts "No appropriate tweet found, no tweet was sent."
