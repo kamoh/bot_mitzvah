@@ -12,3 +12,9 @@ desc 'Rake test'
 task :test => :environment do 
   puts 'test task'
 end
+
+desc 'Twitter API test'
+task :test_tweet => :environment do 
+  puts "Tweeting to test account"
+  $client.update("@testynotreal Mazel tov!")
+end
