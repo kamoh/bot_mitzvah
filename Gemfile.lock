@@ -59,6 +59,7 @@ GEM
     minitest (5.7.0)
     multipart-post (2.0.0)
     naught (1.0.0)
+    pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.5)
     rack-test (0.6.3)
@@ -106,7 +107,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.3.10)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)
@@ -139,11 +139,11 @@ PLATFORMS
 DEPENDENCIES
   byebug
   figaro
+  pg
   rails (= 4.1.4)
   rails-api
   rspec-rails (~> 3.0)
   spring
-  sqlite3
   thin
   twitter
   whenever
