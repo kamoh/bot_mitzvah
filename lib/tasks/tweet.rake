@@ -1,5 +1,5 @@
 desc "Tweet"
-task :tweet => :environment do
+task :tweet_mazel_tov => :environment do
   # Don't tweet if it's late, adjusted for Heroku time 4 hours ahead
   # if Time.now.hour >= 12
     # Find the five most recent Bat Mitzvah tweets and take the first one that isn't a retweet
@@ -11,8 +11,8 @@ task :tweet => :environment do
     else
       puts "No appropriate tweet found, no tweet was sent."
     end
-  else
-    puts "Too late to be tweeting about major thresholds of adulthood, no tweet was sent."
+  # else
+  #   puts "Too late to be tweeting about major thresholds of adulthood, no tweet was sent."
   # end
 end
 
